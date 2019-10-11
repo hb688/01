@@ -1,0 +1,19 @@
+<view class='item' >
+    //显示已存在的图片列表,点击删除删除前一个view
+    <view wx:for="{{imgList}}">
+      <view class='imgList'>{{item.pictureurl}}</view>
+      <button class='bgBtn' data-index="{{index}}" bindtap='hanlderdelBtn'>删除</button>
+    </view>
+  </view>
+<view class='item'>
+    <text class='txt'>资料上传</text>
+    <view class='photoes'>
+      <view class='uplist' wx:for="{{array}}" wx:for-index="idx" wx:for-item="item">
+        <view class='fileList'>
+          <image src="{{item.src}}"></image>
+        </view>
+        <button class='bgBtn' data-id='{{idx}}' bindtap='uploadImg'>上传照片</button>
+      </view>
+      <view class='addMore' bindtap='addMorePhoto'>添加多张</view>
+    </view>
+</view>

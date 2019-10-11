@@ -1,0 +1,36 @@
+<view class="container">
+  <image class="backgroundImg" src='/pages/websrc/img/goods/background.png'></image>
+  <view class='user-header'>
+    <image src='{{xcxUserVO.head_img}}'></image>
+    <button type='default' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" hidden="{{viewDatas.login_button_hidden}}">{{viewDatas.login_button}}</button>
+    <text>{{xcxUserVO.username}}</text>
+  </view>
+  <view class='user-menu'>
+    <view bindtap="tapIdcard">
+      <image class="icon-img" src='/pages/websrc/img/goods/icon-idcard.png'></image>
+      <text>身份认证</text>
+      <text class="middle">></text>
+      <text hidden="{{viewDatas.user_idcard_hidden}}" class="last {{viewDatas.user_idcard_color}}">{{viewDatas.user_idcard}}</text>
+    </view>
+    <view>
+      <image class="icon-img" src='/pages/websrc/img/goods/icon-telphone.png'></image>
+      <text>绑定手机号</text>
+      <text class="middle">></text>
+      <view class="last" hidden="{{viewDatas.user_telphone_hidden}}">
+        <button class="{{viewDatas.user_telphone_color}}" type='default' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">{{viewDatas.user_telphone}}</button>
+      </view>
+    </view>
+    <view bindtap="tapCallTel">
+      <image class="icon-img" src='/pages/websrc/img/goods/icon-callphone.png'></image>
+      <text>客服热线</text>
+      <text class="middle">></text>
+      <text class="last">{{viewDatas.customer_service_telphone}}</text>
+    </view>
+    <view bindtap="tapAboutUs">
+      <image class="icon-img" src='/pages/websrc/img/goods/icon-about.png'></image>
+      <text>关于小数点</text>
+      <text class="middle">></text>
+      <text class="last"></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class='container'>
+  <text class="ui-header">已向绑定手机号</text>
+  <text class="ui-header">{{sgUserPO.country_code}}-{{viewDatas.temp_phone_number}}</text>
+  <text class="ui-header">发送验证码</text>
+  <form bindsubmit="formSubmit">
+    <view class='ui-input'>
+      <input class="input-text" type='text' name='phone_message' value="{{viewDatas.phone_message}}" maxlength='4' placeholder='{{viewDatas.phone_message_pl}}'/>
+      <button class="input-button" type='default' bindtap="sendMessage">获取验证码</button>
+    </view>
+    <view class='ui-button'>
+      <button type='default' form-type="submit">完 成</button>
+    </view>
+  </form>
+</view>

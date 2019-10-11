@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container" id="containerDiv">
+  <view class="header-menu">
+    <block wx:for="{{moduleArray}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+      <view class="{{item.className}}" bindtap="clickModuleName" data-modulecode="{{item.modulecode}}">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="v-main" hidden='{{hiddenView.main}}'>
+    <view>
+      <text class='small-title'>最新推荐 ></text>
+      <view class='pd-window'>
+        <block wx:for="{{recommendList}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+          <view class='pd-d' bindtap="clickProduct" data-id='{{item.id}}'>
+            <image src='http://wx.rapoint.com/xcx/zyhb/product/img?id={{item.id}}' lazy-load='true' mode='aspectFill'></image>
+            <text>{{item.img_title}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view>
+      <text class='small-title'>热门产品 ></text>
+      <view class='pd-window'>
+        <block wx:for="{{hotList}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+          <view class='pd-d' bindtap="clickProduct" data-id='{{item.id}}'>
+            <image src='http://wx.rapoint.com/xcx/zyhb/product/img?id={{item.id}}' lazy-load='true' mode='aspectFill'></image>
+            <text>{{item.img_title}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='v-product' hidden='{{hiddenView.product}}'>
+    <view class='pd-window'>
+      <block wx:for="{{productList}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+        <view class='pd-d' bindtap="clickProduct" data-id='{{item.id}}'>
+          <image src='http://wx.rapoint.com/xcx/zyhb/product/img?id={{item.id}}' lazy-load='true' mode='aspectFill'></image>
+          <text>{{item.img_title}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class='wd' hidden='{{hiddenView.userwindow}}'>
+  <view>
+    <form bindsubmit="formSubmit">
+      <view class='wd-text'>
+        <text>设置名片\n一键生成在图片上</text>
+      </view>
+      <view class='wd-input'>
+        <input type='text' name='username' placeholder='请输入您的姓名'/>
+        <input type='text' name='telphone' placeholder='请输入您的手机号码'/>
+      </view>
+      <view class='wd-button'>
+        <button type='primary' form-type="submit">保存</button>
+        <button type='default' bindtap="clickCloseWindow">关闭</button>
+      </view>
+    </form>
+  </view>
+</view>
+<view class='wd' hidden='{{hiddenView.authwindow}}'>
+  <view>
+    <view class='wd-text'>
+      <text>本小程序必须授权后才可使用</text>
+    </view>
+    <view class='wd-button'>
+      <button type='primary' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权</button>
+    </view>
+  </view>
+</view>

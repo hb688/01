@@ -1,0 +1,64 @@
+page {
+  height: 100%;
+  /* background-color: #F1F1F1; */
+}
+.ui-header {
+  text-align: center;
+  font-size: 44rpx;
+  font-family: "微软雅黑";
+  color: #121235;
+  line-height: 44rpx;
+  display: block;
+  margin: 70rpx 0 0 0;
+}
+.ui-header-s {
+  text-align: center;
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+  color: #b0b0c7;
+  line-height: 28rpx;
+  display: block;
+  margin: 40rpx 0 30rpx 0;
+}
+.ui-input {
+  background-color: #FFFFFF;
+  padding: 0 70rpx;
+}
+.ui-input > view {
+  border-bottom: 1px solid #CCC;
+  float: left;
+  width: 610rpx;
+}
+.ui-input > view > input {
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  margin-top: 70rpx;
+  margin-bottom: 30rpx;
+  width: 570rpx;
+  height: 30rpx;
+  float: left;
+}
+.ui-input > view > image {
+  margin-top: 75rpx;
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.ui-button {
+  margin-top: 60rpx;
+  float: left;
+  width: 100%;
+}
+.ui-button>button {
+  margin: 0 auto;
+  width: 610rpx;
+  display: block;
+  color: #FFF;
+  font-size: 28rpx;
+  line-height: 92rpx;
+  height: 92rpx;
+  background-color: rgb(241, 69, 45, 0.5);
+}
+.ui-button>button.red {
+  background-color: rgb(241, 69, 45);
+}

@@ -1,0 +1,32 @@
+<view>
+  <view class='product-detail'>
+    <!--图片展示和按钮-->
+    <view class='pd-img'>
+      <image src='{{detailInfo.imgPath}}' bindtap='clickOpenImage' mode='widthFix'></image>
+    </view>
+    <view class='pd-bt'>
+      <button bindtap='clickDownloadImg'>一键保存到手机</button>
+    </view>
+    <view class='pd-bt-small'>
+      <image src='/pages/websrc/img/plat/icon-zan{{checkLike}}.png' bindtap='clickLikeButton'></image><text bindtap='clickLikeButton'>喜欢</text>
+      <image src='/pages/websrc/img/plat/icon-fenxiang.png' bindtap='clickShareButton'></image><text bindtap='clickShareButton'>分享</text>
+    </view>
+  </view>
+  <view class="v-main">
+    <view>
+      <view>
+        <text class='small-title'>更多推荐</text>
+        <text class='small-right' bindtap='reloadProducts'>换一换</text>
+        <image class='small-img-right' bindtap='reloadProducts' src='/pages/websrc/img/plat/update.png'></image>
+      </view>
+      <view class='pd-window'>
+        <block wx:for="{{productList}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+          <view class='pd-d' bindtap="clickProduct" data-id='{{item.id}}'>
+            <image src='http://wx.rapoint.com/xcx/zyhb/product/img?id={{item.id}}' lazy-load='true' mode='aspectFill'></image>
+            <text>{{item.img_title}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

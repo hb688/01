@@ -1,0 +1,6 @@
+.about-view {
+  width: 690rpx;
+  margin: 30rpx auto;
+}
+.about-content {
+}

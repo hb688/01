@@ -1,0 +1,156 @@
+<view class="page">
+
+  <!--顶部导航栏-->
+  <view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">未完成订单</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : 'off'}}" data-current="1" bindtap="swichNav">历史订单</view>
+
+  </view>
+
+  <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <swiper-item class="swiperitem">
+      <view>
+      <view class='content'>
+
+
+
+        <view class='left'>
+         <view class="flag"></view> 订单状态
+
+
+        </view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>借款人</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>产品名称</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>担保金额(元)</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>签约时间</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+
+      <view class='content'>
+        <view class='left'>金融顾问</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+</view>
+
+
+  <view>
+      <view class='content'>
+
+
+
+        <view class='left'>
+          <view class="flag"></view> 订单状态
+
+
+        </view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>借款人</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>产品名称</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>担保金额(元)</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class='content'>
+        <view class='left'>签约时间</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+
+      <view class='content'>
+        <view class='left'>金融顾问</view>
+        <view class='right'>
+          <view class='right-left'>
+            <input bindinput='getPhoneValue' value='{{phone}}' />
+          </view>
+        </view>
+        <view class="line"></view>
+      </view>
+</view>
+
+    </swiper-item>
+
+ 
+
+
+    <swiper-item class="swiperitem">
+      <view>
+
+      </view>
+    </swiper-item>
+
+  </swiper>
+</view>

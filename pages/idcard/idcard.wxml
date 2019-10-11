@@ -1,0 +1,19 @@
+<view class='container'>
+  <text class="ui-header">身份信息</text>
+  <text class="ui-header-s">为了您的信息安全，请完成身份信息的验证</text>
+  <form bindsubmit="formSubmit">
+    <view class='ui-input'>
+      <view>
+        <input type='text' name='username' value="{{sgUserPO.username}}" bindinput="bindKeyInputUsername" maxlength='10' placeholder='{{sgUserPO.username_placeholder}}'/>
+        <image hidden="{{hiddenDatas.username_hidden}}" bindtap="clearInputUsername" src="/pages/websrc/img/goods/input-clear.png"></image>
+      </view>
+      <view>
+        <input type='text' name='id_card' value="{{sgUserPO.id_card}}" bindinput="bindKeyInputIdcard" maxlength='18' placeholder='{{sgUserPO.id_card_placeholder}}'/>
+        <image hidden="{{hiddenDatas.idcard_hidden}}" bindtap="clearInputIdcard" src="/pages/websrc/img/goods/input-clear.png"></image>
+      </view>
+    </view>
+    <view class='ui-button'>
+      <button class="{{button_color}}" type='default' form-type="submit">确  定</button>
+    </view>
+  </form>
+</view>

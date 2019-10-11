@@ -1,0 +1,166 @@
+<view class="page">
+
+  <!--顶部导航栏-->
+  <view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">基本信息
+      <view class="flagtop" wx:if="{{showif}}"></view>
+    </view>
+    <view class="tab-item {{currentTab==1 ? 'on' : 'off'}}" data-current="1" bindtap="swichNav">办理流程
+
+      <view class="flagtop" wx:if="{{showif1}}"></view>
+    </view>
+    <view class="tab-item {{currentTab==2 ? 'on' : 'off'}}" data-current="2" bindtap="swichNav">费用信息
+
+      <view class="flagtop" wx:if="{{showif2}}"></view>
+    </view>
+
+  </view>
+
+  <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <swiper-item class="swiperitem">
+      <view>
+        <view class="title">
+          <view class="titleflag"></view> {{title}}</view>
+
+            <!-- 基本信息 -->
+
+        <view wx:for='{{baseInformation}}' data-name='{{item.name}}' data-id='{{item.id}}' data-index="{{index}}"  wx:item="item" wx:key>
+
+          <view class='content' style="margin-top:0rpx">
+            <view class='left'>{{item.name}} </view>
+            <view class='right'>
+              <view class='right-left'>
+                <input bindinput='getPhoneValue' value='{{item.soft}}' class="baseInformation"/>
+              </view>
+            </view>
+            <view class="line"></view>
+          </view>
+        </view>
+
+
+
+      </view>
+
+
+      <view>
+
+      <view style="margin-bottom:20rpx"></view>
+        <!-- 债权人 -->
+
+        <view wx:for='{{creditors}}' data-name='{{item.name}}' data-id='{{item.id}}' data-index="{{index}}"  wx:item="item" wx:key>
+
+          <view class='content' style="margin-top:0rpx">
+            <view class='left'>{{item.name}} </view>
+            <view class='right'>
+              <view class='right-left'>
+                <input bindinput='getPhoneValue' value='{{item.soft}}' class="baseInformation"/>
+              </view>
+            </view>
+            <view class="line"></view>
+          </view>
+        </view>
+
+        <!-- 办理流程 -->
+
+        <view class="title">
+          <view class="titleflag"></view> {{handletitle}}</view>
+        <view class='content'>
+          <view class='left'>签约
+            <view class="handleline"> </view>
+
+            <view class="mright">已完成</view>
+          </view>
+          <view class='right'>
+            <view class='right-left'>
+              <input bindinput='getPhoneValue' value='{{phone}}' />
+            </view>
+          </view>
+
+        </view>
+        <view class='content'>
+          <view class='left'>公正
+            <view class="handleline"></view>
+            <view class="mright">已完成</view>
+          </view>
+          <view class='right'>
+            <view class='right-left'>
+              <input bindinput='getPhoneValue' value='{{phone}}' />
+            </view>
+          </view>
+
+        </view>
+
+
+        <view class="title">
+          <view class="titleflag"></view> {{costtitle}}</view>
+        <view>
+
+        </view>
+
+
+        <!-- <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text> -->
+        <!-- <text class='yuzhong'>{{item.name}}</text> -->
+        <view wx:for='{{costInformation}}' data-name='{{item.name}}' data-id='{{item.id}}' data-index="{{index}}" wx:item="item" wx:key>
+
+          <view class='content' style="margin-top:0rpx">
+            <view class='left'>{{item.name}} </view>
+            <view class='right'>
+              <view class='right-left'>
+                <input bindinput='getPhoneValue' value='{{item.soft}}' />
+              </view>
+            </view>
+            <view class="line"></view>
+          </view>
+        </view>
+
+        <!-- <view class='content'>
+          <view class='left'>类型 </view>
+          <view class='right'>
+            <view class='right-left'>
+              <input bindinput='getPhoneValue' value='{{phone}}' />
+            </view>
+          </view>
+          <view class="line"></view>
+        </view>
+        <view class='content'>
+          <view class='left'>金额(元) </view>
+          <view class='right'>
+            <view class='right-left'>
+              <input bindinput='getPhoneValue' value='{{phone}}' />
+            </view>
+          </view>
+          <view class="line"></view>
+        </view>
+        <view class='content'>
+          <view class='left'>操作时间 </view>
+          <view class='right'>
+            <view class='right-left'>
+              <input bindinput='getPhoneValue' value='{{phone}}' />
+            </view>
+          </view>
+          <view class="line"></view>
+        </view> -->
+      </view>
+    </swiper-item>
+
+
+    <!-- 第二个 -->
+
+    <swiper-item class="swiperitem">
+      <view>
+
+      </view>
+    </swiper-item>
+
+
+
+    <!-- 第三个 -->
+    <swiper-item class="swiperitem">
+      <view>
+
+      </view>
+    </swiper-item>
+
+  </swiper>
+</view>

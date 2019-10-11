@@ -1,0 +1,44 @@
+<view class='form'>
+<view class='content'>
+  <view class='left'>姓名：</view>
+  <view class='right'>
+    <view class='right-left'>
+     <input placeholder='请输入真实姓名' bindinput='getNameValue' value='{{name}}' />
+    </view>    
+  </view>
+</view>
+<view class='content'>
+  <view class='left'>手机号：</view>
+  <view class='right'>
+    <view class='right-left'>
+   <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}' />
+    </view> 
+  </view>
+</view>
+<view class='content'>
+  <view class='left'>验证码：</view>
+  <view class='right'>
+    <view class='right-left'>
+  <input placeholder='请输入验证码' bindinput='getCodeValue' value='{{code}}' />
+    </view>
+    <view class='right-right'>
+      <button class='btn'>验证码</button>
+    </view>
+  </view>
+</view>
+<!--  wx:if 和wx:else要紧紧在一起 -->
+  <view wx:if='{{upimg}}' class='upimage'>
+    <image class='upimg' src='{{upimg}}'></image>
+  </view>
+  <view wx:else>
+    <view class="upimage" catchtap='uploadimgurl'>
+      <view class='upimage-tips'>
+        <image class="add" src="/static/images/index/upimg.png"> </image>
+      </view>
+      <view class='upimage-tips'>
+        <text>点击上传营业执照</text>
+      </view>
+    </view>
+  </view>
+  <button class='changeBtn' bindtap='save'>提交认证资料</button>
+</view>

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/userinfo/userinfo",
+    "pages/product/product",
+    "pages/about/about",
+    "pages/idcard/idcard",
+    "pages/telphone/telphone",
+    "pages/order/order",
+    "pages/orderdetail/orderdetail",
+    "pages/bbb/bbb",
+    "pages/ddd",
+    "pages/ddd/ddd"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小数点订单查询",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/ddd/ddd",
+        "text": "订单0",
+        "iconPath": "pages/websrc/img/goods/icon-ddcx.png",
+        "selectedIconPath": "pages/websrc/img/goods/icon-ddcx-check.png"
+      },
+      {
+        "pagePath": "pages/orderdetail/orderdetail",
+        "text": "订单2",
+        "iconPath": "pages/websrc/img/goods/icon-ddcx.png",
+        "selectedIconPath": "pages/websrc/img/goods/icon-ddcx-check.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "pages/websrc/img/goods/icon-ddcx.png",
+        "selectedIconPath": "pages/websrc/img/goods/icon-ddcx-check.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "pages/websrc/img/goods/icon-grzx.png",
+        "selectedIconPath": "pages/websrc/img/goods/icon-grzx-check.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,3 @@
+<view class="about-view">
+  <text class="about-content">{{content}}</text>
+</view>
